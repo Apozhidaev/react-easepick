@@ -1,6 +1,6 @@
 # react-easepick
 
-This component is react wrapper for [easepick](https://easepick.com/).
+This component is EasePicker base on [easepick](https://easepick.com/).
 
 
 
@@ -14,7 +14,6 @@ This component is react wrapper for [easepick](https://easepick.com/).
 
 Step 1.
 ```bash
-npm i @easepick/core
 npm i react-easepick
 ```
 
