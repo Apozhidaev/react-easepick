@@ -1,0 +1,36 @@
+{
+  "name": "react-easepick",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/module.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:Apozhidaev/react-easepick.git",
+  "author": "alexanderpo <alexander.pozhidaev@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "easepick",
+    "datepicker",
+    "rangepicker",
+    "date",
+    "daterange",
+    "picker",
+    "range"
+  ],
+  "scripts": {
+    "build:ts": "tsc",
+    "build:cjs": "esbuild src/index.ts --format=cjs --bundle --outfile=dist/index.js --external:react --external:@easepick/core",
+    "build:esm": "esbuild src/index.ts --format=esm --bundle --outfile=dist/module.js --external:react --external:@easepick/core",
+    "build": "yarn run build:cjs && yarn run build:esm && yarn run build:ts"
+  },
+  "peerDependencies": {
+    "@easepick/core": ">=1.0.0",
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@easepick/core": "^1.2.0",
+    "@types/react": "^18.0.26",
+    "esbuild": "^0.16.9",
+    "react": "^18.2.0",
+    "typescript": "^4.9.4"
+  }
+}
