@@ -1,3 +1,4 @@
+import type { Core } from "@easepick/core";
 import type { EasePickOptions, EasePickInputElement } from "easepick-react";
 import type { IAmpPlugin } from "@easepick/amp-plugin/dist/interface";
 import EasePicker from "easepick-react";
@@ -13,7 +14,7 @@ import {
 
 type Options = EasePickOptions & { AmpPlugin?: IAmpPlugin };
 
-export type { Options as EasePickOptions, EasePickInputElement };
+export type { Options as EasePickOptions, EasePickInputElement, Core };
 
 export {
   AmpPlugin,
