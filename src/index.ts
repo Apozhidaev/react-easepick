@@ -1,6 +1,11 @@
 import type { Core } from "@easepick/core";
-import type { EasePickOptions, EasePickInputElement } from "easepick-react";
+import type {
+  EasePickWrapperProps,
+  EasePickOptions,
+  EasePickInputElement,
+} from "easepick-react";
 import type { IAmpPlugin } from "@easepick/amp-plugin/dist/interface";
+import type { IKbdPlugin } from "@easepick/kbd-plugin/dist/interface";
 import EasePicker from "easepick-react";
 import {
   AmpPlugin,
@@ -12,9 +17,17 @@ import {
   TimePlugin,
 } from "@easepick/bundle";
 
-type Options = EasePickOptions & { AmpPlugin?: IAmpPlugin };
+type Options = EasePickOptions & {
+  AmpPlugin?: IAmpPlugin;
+  KbdPlugin?: IKbdPlugin;
+};
 
-export type { Options as EasePickOptions, EasePickInputElement, Core };
+export type {
+  EasePickWrapperProps as EasePickerProps,
+  Options as EasePickOptions,
+  EasePickInputElement,
+  Core,
+};
 
 export {
   AmpPlugin,

@@ -1,6 +1,6 @@
 # react-easepick
 
-This component is EasePicker base on [easepick](https://easepick.com/).
+`EasePicker` - a react component based on the [easepick](https://easepick.com/) library.
 
 
 
