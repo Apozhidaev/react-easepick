@@ -4,27 +4,19 @@ import type {
   EasePickOptions,
   EasePickInputElement,
 } from "easepick-react";
-import type { IAmpPlugin } from "@easepick/amp-plugin/dist/interface";
-import type { IKbdPlugin } from "@easepick/kbd-plugin/dist/interface";
 import EasePicker from "easepick-react";
-import {
-  AmpPlugin,
-  DateTime,
-  KbdPlugin,
-  LockPlugin,
-  PresetPlugin,
-  RangePlugin,
-  TimePlugin,
-} from "@easepick/bundle";
+import { DateTime } from "@easepick/datetime";
+import { LockPlugin } from "@easepick/lock-plugin";
+import { RangePlugin } from "@easepick/range-plugin";
+import { PresetPlugin } from "@easepick/preset-plugin";
+import { TimePlugin } from "@easepick/time-plugin";
+import { AmpPlugin } from "easepick-plugin-amp";
+import { KeyboardPlugin } from "easepick-plugin-keyboard";
 
-type Options = EasePickOptions & {
-  AmpPlugin?: IAmpPlugin;
-  KbdPlugin?: IKbdPlugin;
-};
 
 export type {
   EasePickWrapperProps as EasePickerProps,
-  Options as EasePickOptions,
+  EasePickOptions,
   EasePickInputElement,
   Core,
 };
@@ -32,7 +24,7 @@ export type {
 export {
   AmpPlugin,
   DateTime,
-  KbdPlugin,
+  KeyboardPlugin,
   LockPlugin,
   PresetPlugin,
   RangePlugin,

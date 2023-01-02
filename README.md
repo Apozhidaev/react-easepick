@@ -6,6 +6,9 @@
 
 ### Attributes
 
+* **date** - date value
+* **startDate** - start date (RangePlugin)
+* **endDate** - end date (RangePlugin)
 * **options** - easepick options
 * **...inputProps[]** - input props
 
@@ -19,23 +22,29 @@ npm i react-easepick
 
 Step 2.
 ```jsx
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import EasePicker, { EasePickOptions } from "react-easepick";
 
-function App() {
+function Demo() {
+  const [date, setDate] = useState<Date | undefined>();
   const options: EasePickOptions = useMemo(
     () => ({
-      date: new Date(),
       css: [
-        'https://cdn.jsdelivr.net/npm/@easepick/core@1.2.0/dist/index.css',
+        'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css',
       ],
+      setup(picker) {
+        picker.on("select", (e) => {
+          const { date } = e.detail;
+          setDate(date);
+        });
+      },
     }),
     []
   );
 
-  return <EasePicker options={options} />;
+  return <EasePicker date={date} options={options} />;
 }
 
-export default App;
+export default Demo;
 
 ```

@@ -1,6 +1,6 @@
 {
   "name": "react-easepick",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/module.js",
   "types": "dist/index.d.ts",
@@ -36,7 +36,14 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@easepick/bundle": "^1.2.0",
-    "easepick-react": "^0.0.5"
+    "@easepick/core": "^1.2.0",
+    "@easepick/datetime": "^1.2.0",
+    "@easepick/lock-plugin": "^1.2.0",
+    "@easepick/preset-plugin": "^1.2.0",
+    "@easepick/range-plugin": "^1.2.0",
+    "@easepick/time-plugin": "^1.2.0",
+    "easepick-plugin-amp": "^0.0.2",
+    "easepick-plugin-keyboard": "^0.0.2",
+    "easepick-react": "^1.0.1"
   }
 }
